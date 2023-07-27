@@ -6,7 +6,11 @@
 
 :root {
    --bg-black: #000;
+   --bg-darkgray: #333;
+
    --cl-white: #fff;
+   --cl-lightgray: #ccc;
+
    --dc-orange: #b28756;
 }
 
@@ -72,5 +76,90 @@ header   {
 .menu-container li a:hover,
 .menu-container .active a {
    border-bottom: 5px solid var(--dc-orange);
+   color: var(--cl-lightgray);
 }
 /* End Navigation Bar */
+
+/* Start Banner */
+.banner-container {
+   height: calc(100vh - 100px);
+   background-color: var(--bg-darkgray);
+   background-image: url('../assets/complements/bg.jpg');
+   background-size: cover;
+   background-position: bottom;
+   overflow: hidden;
+}
+
+.banner-container .slider-container {
+   width: 1000vw;
+   height: 100%;
+}
+
+.banner-container .slide   {
+   width: 100vw;
+   height: 100%;
+   display: inline-block;
+   background-color: rgba(0, 0, 0, .8);
+}
+
+.banner-container .slide-area {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: var(--cl-white);
+   height: 100%;
+}
+
+.banner-container h1 {
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 50px;
+}
+
+.banner-container h1 span  {
+   color: var(--dc-orange);
+}
+
+.banner-container h2 {
+   text-transform: uppercase;
+   margin-top: 20px;
+}
+
+.banner-container a  {
+   display: block;
+   background-color: var(--dc-orange);
+   color: var(--cl-white);
+   text-transform: uppercase;
+   text-decoration: none;
+   font-size: 12px;
+   font-weight: 600;
+   padding: 10px 30px;
+   margin-top: 30px;
+   border-radius: 20px;
+}
+
+.banner-container .sliders-pointers {
+   width: 100vw;
+   height: 20px;
+   position: absolute;
+   margin-top: -50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.banner-container .pointer {
+   width: 15px;
+   height: 15px;
+   border: 2px solid var(--dc-orange);
+   border-radius: 8px;
+   margin-left: 5px;
+   margin-right: 5px;
+   cursor: pointer;
+}
+
+.banner-container .pointer.active   {
+   background-color: var(--dc-orange);
+}
+/* End Banner */
